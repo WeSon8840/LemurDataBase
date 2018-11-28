@@ -5,6 +5,7 @@
  */
 
 package lemurdatabase;
+import javax.swing.*;
 
 /**
  *
@@ -16,7 +17,12 @@ public class LemurDatabase {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String Inputnum, InputType;
+        int numOfLemurs;
+        
+        Inputnum = JOptionPane.showInputDialog("How many Lemurs do you want to add to the list?");
+        numOfLemurs =  Integer.parseInt(Inputnum);
+        
     }
     
 }

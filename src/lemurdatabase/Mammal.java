@@ -12,21 +12,28 @@ package lemurdatabase;
  */
 public class Mammal {
   private int itsAge;
-  private int itsWeight;
-  private boolean gender;
+  private double itsWeight;
+  private String gender;
   
   
   public Mammal(){
     //Default Constructor
-      itsAge = 0;
-      itsWeight = 0;
+      itsAge = (int)(Math.random() * 12 + 1);
+      itsWeight = (Math.random() * 5 + 1);
+      int num = (int)(Math.random() * 2 + 1);
+      if (num == 1) {
+          gender = "Male";
+      }
+      else {
+          gender = "Female";
+      }
   }
   
   public int getAge() {
     return itsAge;
   }
 
-  public int getWeight() {
+  public double getWeight() {
     return itsWeight;
   }
 
@@ -37,23 +44,17 @@ public class Mammal {
   public void setWeight(int newWeight) {
     itsWeight = newWeight;
   }
-    
-  public boolean getGender() {
-    return gender;
-  }
-
-  public void setMale(boolean theGender) {
-    gender = theGender;
+  
+  public String getGender(){
+      return gender;
   }
   
   public String toString() {
     String output = "";
-    if (gender) {
-      output += "Gender = Male\n";
-    } else {
-      output += "Gender = Female\n" + "Female Lemur = Dominant role\n";
-    }
     output += "Age = " + itsAge + "\n";
+    output += "Weight = " + itsWeight + "\n";
+    output += "Gender = " + gender + "\n";
+    
     return output;
   } 
 }
