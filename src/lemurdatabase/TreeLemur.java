@@ -15,6 +15,7 @@ public class TreeLemur extends Lemur {
     String Colour = "Red";
     String packSize = "Large Group";
     
+    //return the output base on the super class.
     public String toString(){
         String output = "Tree Lemur\n" + super.toString() + "\n";
         output += "Food = " + Food + "\n";

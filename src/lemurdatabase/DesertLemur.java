@@ -11,5 +11,16 @@ package lemurdatabase;
  * @author glSon8840
  */
 public class DesertLemur extends Lemur {
-    
+    String food = "Cacti";
+    String colour = "White";
+    double babyDeathRate = 0.66;
+
+    //return the output base on the super class.
+    public String toString() {
+        String output = "Desert Lemur:\n" + super.toString() + "\n";
+        output += "Food = " + food + "\n";
+        output += "Colour = " + colour + "\n";
+        output += "Baby Death Rate = " + babyDeathRate + "\n";
+        return output;
+    }
 }

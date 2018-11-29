@@ -19,11 +19,12 @@ public class Lemur extends Mammal {
         System.out.println("The Lemur can groom themselves using their teeth as a comb");
     }
     
+    //return the output base on the super class.
     public String toString(){
         String output = super.toString();
         output += "Location = " + location + "\n";
         output += "Classification = " + classification + "\n";
-        output += "Coat = " + coat + "\n";
+        output += "Coat = " + coat;
         if(getGender().equals("Female")){
             output += "\nFemale Lemur = Dominant Role";
         }
